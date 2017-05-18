@@ -26,10 +26,8 @@
 	var boxH = 0;
 	var autoScroll = setInterval(function () {
         boxH = box.height();
-		console.log(boxH);
         if(boxH > windowH){
 	        $('body,html').animate({ scrollTop: boxH + 50 }, 200);
-	        console.log('scroll')
         }
 
 	},100);
