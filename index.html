@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>苟宇杰-Jasko</title>
+
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <p class="type-box my-intro"></p>
+</div>
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./js/typed.js"></script>
+<script>
+
+	var windowH = $(window).height();
+	var box = $(".container");
+	var lastH = 0;
+	var boxH = 0;
+	var autoScroll = setInterval(function () {
+        boxH = box.height();
+		console.log(boxH);
+        if(boxH > windowH){
+	        $('body,html').animate({ scrollTop: boxH + 50 }, 200);
+	        console.log('scroll')
+        }
+
+	},100);
+
+
+
+	document.addEventListener('DOMContentLoaded', function(){
+		Typed.new('.my-intro', {
+			typeSpeed: 100,
+			strings: [
+				"Login : jaskobe <br> password : ********** <br>验证中……<br>验证通过，你已获取死星的绝密文件。<br><br>" +
+				"Hello，用星战梗开个小玩笑，这其实是关于我的自我介绍。<br>下面开始咯：<br><br>" +
+				"姓名：苟宇杰 Jasko<br>年龄：24<br>" +
+				"<img src='./img/avatar-circle.jpg' alt='jasko' class='logo'><br>" +
+				"梦想中的我曾想做一个<span class='txt-pink'>设计师</span>，" +
+				"<img src='./img/logo_circle.png' alt='jasko' class='logo'><br>" +
+				"<span>这算我的个人Logo吧。</span><br>" +
+				"生活中的我是一名<span class='txt-pink'>厨师</span>，因为我来自四川加上喜欢做菜，平常会做各种川菜安抚自己那颗吃辣的胃。<br>" +
+				"但其实我的职业是一名<span class='txt-pink'>web前端工程师</span>，正如你现在所看到的我表达自己的方式。<br><br>" +
+				"当然，除了热爱以上几项外，生活中我的兴趣爱好还有很多：<br>" +
+				"铲屎：是的，你没有看错，因为……喵<br>" +
+				"<img src='./img/bug-1.jpeg' alt='Bug' class='bug-photo'><br>" +
+				"这是我养的一只英短，名字叫Bug，因为我想我对他好那我的代码bug就少吧，是这个道理吧？<br>" +
+				"<br>不过我还是有正常的爱好的，特别喜欢听歌、电影、美剧、游戏……<br>" +
+				"那我就先介绍到这吧，期待今后一起工作的日子，还请多多指教。" +
+				"<br>最后，再说一句" +
+				"<br><h3 class='txt-big'>May The Force Be With You</h3><br>"],
+			callback: function() {
+				clearInterval(autoScroll);
+				$('body,html').stop();
+			}
+		});
+
+	});
+</script>
+</body>
+</html>
